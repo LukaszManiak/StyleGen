@@ -1,9 +1,31 @@
+import { Router, RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./ui/Home";
+import ButtonGen from "./features/button/ButtonGen";
+import BorderRadiusGen from "./features/border-radius/BorderRadiusGen";
+import AppLayout from "./ui/AppLayout";
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/button",
+        element: <ButtonGen />,
+      },
+      {
+        path: "/border",
+        element: <BorderRadiusGen />,
+      },
+    ],
+  },
+]);
+
 function App() {
-  return (
-    <h1 className="  md:font-sm text-3xl font-bold underline md:font-sans">
-      Hello world!
-    </h1>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
