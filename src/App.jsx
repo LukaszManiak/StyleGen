@@ -1,4 +1,4 @@
-import { Router, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./ui/Home";
 import ButtonGen from "./features/button/ButtonGen";
 import BorderRadiusGen from "./features/border-radius/BorderRadiusGen";
