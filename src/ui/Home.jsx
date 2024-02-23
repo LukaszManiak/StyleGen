@@ -5,7 +5,7 @@ function Home() {
     <section className="mt-10 flex  w-full flex-col items-center justify-around gap-y-20 md:mt-20 ">
       <div className="flex w-full flex-col items-center justify-around  gap-y-10 px-12 md:flex-row md:gap-0">
         <div className="w-6/8 flex flex-col gap-y-6 md:w-1/2">
-          <p className="text-primary text-xl font-semibold tracking-widest">
+          <p className="text-xl font-semibold tracking-widest text-primary">
             Your Ultimate CSS Styling Solution
           </p>
           <h1 className="text-6xl font-bold tracking-wider">🌊StyleGen</h1>
@@ -33,23 +33,23 @@ function Home() {
 
       <div className="mb-10 flex w-full items-center justify-center">
         <ul className="grid grid-cols-3 gap-x-2 gap-y-2">
-          <li className=" rounded-md border-2 px-4 py-2">
-            <Link to="/button">button</Link>
+          <li className="rounded-md border-2 px-4 py-2 text-center">
+            <Link to="/button">Button</Link>
           </li>
-          <li className=" rounded-md border-2 px-4 py-2">
-            <Link to="/button">button</Link>
+          <li className=" rounded-md border-2 px-4 py-2 text-center">
+            <Link to="/border">Border</Link>
           </li>
-          <li className=" rounded-md border-2 px-4 py-2">
-            <Link to="/button">button</Link>
+          <li className=" rounded-md border-2 px-4 py-2 text-center">
+            <Link to="/flexbox">Flexbox</Link>
           </li>
-          <li className=" rounded-md border-2 px-4 py-2">
-            <Link to="/button">button</Link>
+          <li className=" rounded-md border-2 px-4 py-2 text-center">
+            <Link to="/grid">Grid</Link>
           </li>
-          <li className=" rounded-md border-2 px-4 py-2">
-            <Link to="/button">button</Link>
+          <li className=" rounded-md border-2 px-4 py-2 text-center">
+            <Link to="/text-shadow">Text Shadow</Link>
           </li>
-          <li className=" rounded-md border-2 px-4 py-2">
-            <Link to="/button">button</Link>
+          <li className=" rounded-md border-2 px-4 py-2 text-center">
+            <Link to="/box-shadow">Box Shadow</Link>
           </li>
         </ul>
       </div>
