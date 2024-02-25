@@ -169,7 +169,21 @@ function BorderRadiusGen() {
       </div>
 
       <div className="w-full rounded-lg px-12 py-6">
-        <p className="rounded-lg bg-text px-12 py-6 text-background">{`border-radius: ${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px;`}</p>
+        <div className="flex flex-col items-start justify-between rounded-lg bg-text px-6 py-6 text-background md:flex-row">
+          <p className=" text-background">
+            {`border-radius: ${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px;`}
+          </p>
+
+          <button
+            onClick={() => {
+              navigator.clipboard.writeText(
+                `border-radius: ${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px;`,
+              );
+            }}
+          >
+            📋 Copy code
+          </button>
+        </div>
       </div>
     </section>
   );
