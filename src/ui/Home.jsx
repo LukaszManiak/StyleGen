@@ -39,7 +39,7 @@ function Home() {
             <Link to="/button">Button</Link>
           </li>
           <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
-            <Link to="/border">Border</Link>
+            <Link to="/border">Border radius</Link>
           </li>
           <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
             <Link to="/flexbox">Flexbox</Link>
