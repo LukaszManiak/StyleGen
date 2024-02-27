@@ -36,7 +36,7 @@ function Home() {
       <div className="mb-10 flex w-full items-center justify-center">
         <ul className="grid w-4/5 grid-cols-3 gap-x-2 gap-y-2 rounded-md bg-secondary p-6">
           <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
-            <Link to="/button">Button</Link>
+            <Link to="/line-height">Line Height</Link>
           </li>
           <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
             <Link to="/border">Border radius</Link>
@@ -52,6 +52,15 @@ function Home() {
           </li>
           <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
             <Link to="/box-shadow">Box Shadow</Link>
+          </li>
+          <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
+            <Link to="/gradient">Gradient</Link>
+          </li>
+          <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
+            <Link to="/letter-spacing">Letter Spacing</Link>
+          </li>
+          <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
+            <Link to="/list-style">List Style</Link>
           </li>
         </ul>
       </div>

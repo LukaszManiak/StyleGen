@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { Link } from "react-router-dom";
+import GoBackLink from "../../ui/GoBackLink";
 
 const initialState = {
   selectedStandard: "px",
@@ -50,12 +50,7 @@ function BorderRadiusGen() {
 
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
-      <Link
-        className="w-full px-12 transition-all ease-in-out hover:px-6 hover:font-bold"
-        to="/"
-      >
-        👈🏼 Go back
-      </Link>
+      <GoBackLink />
       <div className="flex w-full flex-col justify-center  gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
         <div className="w-full rounded-lg bg-white p-6 md:w-1/2">
           <h2>Border-radius</h2>
