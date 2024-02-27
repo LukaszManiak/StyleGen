@@ -19,11 +19,6 @@ function Home() {
             style and professionalism.
           </p>
         </div>
-        <img
-          className="w-6/8 md:w-2/5"
-          src="./svg/undraw_add_color_re_buro.svg"
-          alt=""
-        />
       </div>
 
       <div>
