@@ -23,8 +23,8 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 
 ### Links
 
-<!-- - Solution URL: [GitHub](https://github.com/LukaszManiak/Frontend-Mentor-REST-Countries) -->
-<!-- - Live Site URL: [Netlify](https://wordlyexplorer.netlify.app/) -->
+- Solution URL: [GitHub](https://github.com/LukaszManiak/StyleGen)
+- Live Site URL: [Netlify](https://stylegen.netlify.app/)
 
 ### Built with
 
