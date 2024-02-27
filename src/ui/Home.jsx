@@ -62,6 +62,12 @@ function Home() {
           <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
             <Link to="/list-style">List Style</Link>
           </li>
+          <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
+            <Link to="/text-color">Text Color</Link>
+          </li>
+          <li className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background">
+            <Link to="/text-align">Text Align</Link>
+          </li>
         </ul>
       </div>
     </section>

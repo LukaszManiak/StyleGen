@@ -10,7 +10,9 @@ import BoxShadowGen from "./features/box-shadow-generator/BoxShadowGen";
 import ListStyleGen from "./features/list-style-generator/ListStyleGen";
 import LetterSpacingGen from "./features/letter-spacing-generator/LetterSpacingGen";
 import GradientGen from "./features/gradient-generator/GradientGen";
+import ColorGen from "./features/text-color-generator/ColorGen";
 import LineHeightGen from "./features/line-height-generator/LineHeightGen";
+import TextAlignGen from "./features/text-align-generator/TextAlignGen";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
       {
         path: "/gradient",
         element: <GradientGen />,
+      },
+      {
+        path: "/text-color",
+        element: <ColorGen />,
+      },
+      {
+        path: "/text-align",
+        element: <TextAlignGen />,
       },
     ],
   },
