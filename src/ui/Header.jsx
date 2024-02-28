@@ -1,12 +1,21 @@
 function Header() {
   return (
     <header>
-      <nav className=" bg-accent w-full px-12 py-6">
-        <h1 className="text-background text-xl font-bold tracking-wide">
-          StyleGen
-        </h1>
+      <nav className=" bg-backround w-full border-b border-text px-12 py-6">
+        <div className="flex items-center gap-x-2">
+          <div
+            style={{
+              backgroundColor: "rgba(130, 129, 234, 1)",
+              backgroundImage:
+                "radial-gradient(circle, rgba(130, 129, 234, 1) 0%, rgba(41, 189, 219, 1) 30%, rgba(238, 251, 252, 1) 100%)",
+            }}
+            className="h-6 w-6 rounded-full bg-text"
+          ></div>
+          <h1 className=" text-xl font-bold tracking-wide text-text">
+            StyleGen
+          </h1>
+        </div>
       </nav>
-      <img className="h-12 w-full" src="./svg/waves.svg" alt="" />
     </header>
   );
 }
