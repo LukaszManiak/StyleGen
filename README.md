@@ -41,4 +41,4 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 
 ### Screenshot
 
-<!-- ![Screenshot 1](/screenshots/screen1.jpeg?raw=true "Screenshot 1") -->
+![Screenshot 1](/screenshots/screen1.jpeg?raw=true "Screenshot 1")
