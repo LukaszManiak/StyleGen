@@ -26,7 +26,7 @@ function Home() {
             backgroundImage:
               "radial-gradient(circle, rgba(130, 129, 234, 1) 0%, rgba(41, 189, 219, 1) 30%, rgba(238, 251, 252, 1) 100%)",
           }}
-          className="h-64 w-64 rounded-full bg-text"
+          className="h-72 w-72 rounded-full bg-text"
         ></div>
       </div>
 
@@ -41,7 +41,7 @@ function Home() {
         <ul className="flex w-4/5 flex-wrap justify-center  gap-x-6 gap-y-6 rounded-md bg-secondary p-6">
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/line-height"
             >
               Line Height
@@ -49,7 +49,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/border"
             >
               Border radius
@@ -57,7 +57,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/flexbox"
             >
               Flexbox
@@ -65,7 +65,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/grid"
             >
               Grid
@@ -73,7 +73,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/text-shadow"
             >
               Text Shadow
@@ -81,7 +81,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/box-shadow"
             >
               Box Shadow
@@ -89,7 +89,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/gradient"
             >
               Gradient
@@ -97,7 +97,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/letter-spacing"
             >
               Letter Spacing
@@ -105,7 +105,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/list-style"
             >
               List Style
@@ -113,7 +113,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/text-color"
             >
               Text Color
@@ -121,7 +121,7 @@ function Home() {
           </li>
           <li>
             <Link
-              className="rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
+              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
               to="/text-align"
             >
               Text Align
