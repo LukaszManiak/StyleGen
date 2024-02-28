@@ -10,6 +10,9 @@ export default {
         secondary: "#8281ea",
         accent: "#7c51e1",
       },
+      boxShadow: {
+        customShadow: "5px 5px 0px 0px rgba(2, 13, 13, 1);",
+      },
     },
   },
   plugins: [],

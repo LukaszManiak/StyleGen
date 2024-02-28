@@ -32,102 +32,90 @@ function Home() {
 
       <div>
         <h2 className="px-12 text-center text-2xl md:text-3xl">
-          Ready to revolutionize your CSS workflow? Dive in right now.
+          Ready to revolutionize your CSS workflow?{" "}
+          <b className="text-accent"> Dive in right now.</b>
         </h2>
-        <p className="text-center text-4xl md:text-5xl">👇🏼</p>
       </div>
 
       <div className="mb-10 flex w-full items-center justify-center">
-        <ul className="flex w-4/5 flex-wrap justify-center  gap-x-6 gap-y-6 rounded-md bg-secondary p-6">
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/line-height"
-            >
-              Line Height
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/border"
-            >
-              Border radius
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/flexbox"
-            >
-              Flexbox
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/grid"
-            >
-              Grid
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/text-shadow"
-            >
-              Text Shadow
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/box-shadow"
-            >
-              Box Shadow
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/gradient"
-            >
-              Gradient
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/letter-spacing"
-            >
-              Letter Spacing
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/list-style"
-            >
-              List Style
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/text-color"
-            >
-              Text Color
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="w-1/3 rounded-md border-2 px-4 py-2 text-center transition-all ease-in-out hover:cursor-pointer hover:border-text hover:bg-text hover:text-background"
-              to="/text-align"
-            >
-              Text Align
-            </Link>
-          </li>
-        </ul>
+        <div className="flex w-4/5 flex-wrap justify-center gap-x-6  gap-y-6  border border-text  p-6">
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/line-height"
+          >
+            Line Height
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/border"
+          >
+            Border radius
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/flexbox"
+          >
+            Flexbox
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/grid"
+          >
+            Grid
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/text-shadow"
+          >
+            Text Shadow
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/box-shadow"
+          >
+            Box Shadow
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/gradient"
+          >
+            Gradient
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/letter-spacing"
+          >
+            Letter Spacing
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/list-style"
+          >
+            List Style
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/text-color"
+          >
+            Text Color
+          </Link>
+
+          <Link
+            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            to="/text-align"
+          >
+            Text Align
+          </Link>
+        </div>
       </div>
     </section>
   );
