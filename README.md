@@ -44,3 +44,4 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 ![Screenshot 1](/screenshots/screen1.jpeg?raw=true "Screenshot 1")
 ![Screenshot 2](/screenshots/screen2.jpeg?raw=true "Screenshot 2")
 ![Screenshot 3](/screenshots/screen3.jpeg?raw=true "Screenshot 3")
+![Screenshot 4](/screenshots/screen4.jpeg?raw=true "Screenshot 4")
