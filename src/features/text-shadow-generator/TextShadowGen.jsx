@@ -55,14 +55,24 @@ function TextShadowGen() {
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
+      <div className="w-full px-12 text-xl">
+        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+          The <b className="text-accent">Text-shadow</b> property in CSS enables
+          the addition of shadows to text. This property is often utilized to
+          add <span className="text-primary">emphasis</span> or{" "}
+          <span className="text-primary">decorative</span> effects to text
+          elements on a webpage.
+        </p>
+      </div>
       <div className="flex w-full flex-col justify-center  gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
         <div className="w-full rounded-lg bg-white p-6 md:w-1/2">
-          <h2>Text-shadow</h2>
+          <h2 className="mb-2 text-3xl tracking-widest">Text-shadow</h2>
 
           <div>
             <div>
               <p>Text</p>
               <input
+                className="w-auto rounded-md border border-text p-1 px-2"
                 type="text"
                 value={text}
                 onChange={(e) =>
@@ -148,8 +158,8 @@ function TextShadowGen() {
               step="1"
             />
           </div>
-          <div>
-            <p>Color</p>
+          <div className="flex w-full justify-between">
+            <p>Color:</p>
             <input
               onChange={(e) =>
                 dispatch({ type: "colorChange", payload: e.target.value })

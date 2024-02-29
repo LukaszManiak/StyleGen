@@ -25,12 +25,26 @@ function TextAlignGen() {
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
+
+      <div className="w-full px-12 text-xl">
+        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+          The <b className="text-accent">text-align</b> property in CSS is used
+          to specify the horizontal alignment of text within its containing
+          element. It accepts values such as "left", "right", "center" and
+          "justify" which depend on the document's writing direction. This
+          property is commonly used to control the{" "}
+          <span className="text-primary">alignment</span> of text within
+          paragraphs, headings, and other textual elements on a webpage.
+        </p>
+      </div>
+
       <div className="flex w-full flex-col justify-center  gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
         <div className="h-1/4 w-full rounded-lg bg-white p-6 md:w-1/2">
-          <h2>Text align</h2>
-          <div className="flex justify-between">
+          <h2 className="mb-4 text-3xl tracking-widest">Text align</h2>
+          <div className="flex items-center justify-between">
             <p>Align value</p>
             <select
+              className="rounded-md border border-text px-2"
               onChange={(e) =>
                 dispatch({
                   type: "alignTypeChange",
@@ -50,7 +64,7 @@ function TextAlignGen() {
 
         <div className="flex w-full flex-col items-center justify-center rounded-lg bg-white p-6 md:w-1/2">
           <div
-            className="h-auto w-3/4 overflow-hidden rounded-md border-4 border-text bg-background p-4"
+            className="h-auto w-3/4 overflow-hidden rounded-md border-2 border-text bg-background p-4"
             style={{
               textAlign: `${alignType}`,
             }}
@@ -63,7 +77,7 @@ function TextAlignGen() {
         </div>
       </div>
 
-      <div className="w-full rounded-lg px-12 py-6">
+      <div className="mb-8 w-full rounded-lg px-12 py-6">
         <div className="flex flex-col items-start justify-between rounded-lg bg-text px-6 py-6 text-background md:flex-row">
           <p className=" text-background">{`text-align: ${alignType};`}</p>
 

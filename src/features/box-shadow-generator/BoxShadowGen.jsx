@@ -60,14 +60,27 @@ function BoxShadowGen() {
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
+
+      <div className="w-full px-12 text-xl">
+        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+          The <b className="text-accent">box-shadow</b> property in CSS allows
+          you to add a shadow effect to elements, such as boxes or buttons. This
+          property is commonly used to add{" "}
+          <span className="text-primary">depth</span> and{" "}
+          <span className="text-primary">visual emphasis</span> to elements on a
+          webpage.
+        </p>
+      </div>
+
       <div className="flex w-full flex-col justify-center  gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
         <div className="w-full rounded-lg bg-white p-6 md:w-1/2">
-          <h2>Box-Shadow</h2>
+          <h2 className="mb-2 text-3xl">Box-Shadow</h2>
 
           <div>
             <div className="flex w-full justify-between">
               <p>Horizontal</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({
                     type: "horizontalChange",
@@ -95,6 +108,7 @@ function BoxShadowGen() {
             <div className="flex w-full justify-between">
               <p>Vertical</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({ type: "verticalChange", payload: e.target.value })
                 }
@@ -119,6 +133,7 @@ function BoxShadowGen() {
             <div className="flex w-full justify-between">
               <p>Blur</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({
                     type: "blurChange",
@@ -146,6 +161,7 @@ function BoxShadowGen() {
             <div className="flex w-full justify-between">
               <p>Spread</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({
                     type: "spreadChange",
@@ -169,8 +185,8 @@ function BoxShadowGen() {
               step="1"
             />
           </div>
-          <div>
-            <p>Color</p>
+          <div className="flex w-full items-center justify-between">
+            <p>Color:</p>
             <input
               onChange={(e) =>
                 dispatch({ type: "colorChange", payload: e.target.value })
@@ -179,8 +195,8 @@ function BoxShadowGen() {
               value={color}
             />
           </div>
-          <div>
-            <p>Inset</p>
+          <div className="flex items-center gap-x-2">
+            <p>Inset:</p>
             <input
               onChange={(e) =>
                 dispatch({ type: "insetChange", payload: e.target.value })
@@ -192,7 +208,7 @@ function BoxShadowGen() {
 
         <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white p-6 md:w-1/2">
           <div
-            className="h-56 w-56 border-4 bg-background"
+            className="h-56 w-56 rounded-md border-2 border-text bg-background"
             style={{
               boxShadow: `${inset ? "inset" : ""} ${horizontal}px ${vertical}px ${blur}px ${spread}px ${color}`,
             }}

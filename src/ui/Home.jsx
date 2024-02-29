@@ -4,7 +4,7 @@ function Home() {
   return (
     <section className="mt-10 flex  w-full flex-col items-center justify-around gap-y-20 md:mt-20 ">
       <div className="border- flex w-full flex-col-reverse items-center  justify-around gap-y-10  px-12  md:flex-row md:gap-0">
-        <div className="w-6/8 flex flex-col gap-y-6 md:w-1/2">
+        <div className="flex w-5/6 flex-col gap-y-6 md:w-1/2">
           <p className=" text-center text-xl font-semibold tracking-widest text-primary md:text-start">
             Your Ultimate CSS Styling Solution
           </p>
@@ -38,79 +38,79 @@ function Home() {
       </div>
 
       <div className="mb-10 flex w-full items-center justify-center">
-        <div className="flex w-4/5 flex-wrap justify-center gap-x-6  gap-y-6  border border-text  p-6">
+        <div className="flex w-4/5 flex-wrap justify-center gap-x-6  gap-y-6  border border-text p-4 md:p-6">
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/line-height"
           >
             Line Height
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/border"
           >
             Border radius
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/flexbox"
           >
             Flexbox
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/grid"
           >
             Grid
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/text-shadow"
           >
             Text Shadow
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/box-shadow"
           >
             Box Shadow
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/gradient"
           >
             Gradient
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/letter-spacing"
           >
             Letter Spacing
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/text-decoration"
           >
             Text Decoration
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/text-color"
           >
             Text Color
           </Link>
 
           <Link
-            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/3 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
             to="/text-align"
           >
             Text Align
