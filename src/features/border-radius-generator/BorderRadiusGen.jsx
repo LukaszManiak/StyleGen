@@ -49,17 +49,28 @@ function BorderRadiusGen() {
   ] = useReducer(reducer, initialState);
 
   return (
-    <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
+    <section className="mt-8 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
+
+      <div className="w-full px-12 text-xl">
+        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+          <b className="text-accent">Border-radius</b> is a CSS property that
+          allows you to create rounded corners for elements such as boxes and
+          buttons. This property is commonly used for creating{" "}
+          <span className="text-primary">visually appealing</span> user
+          interfaces and elements on webpages.
+        </p>
+      </div>
+
       <div className="flex w-full flex-col justify-center  gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
-        <div className="w-full rounded-lg bg-white p-6 md:w-1/2">
-          <h2>Border-radius</h2>
+        <div className="w-full  rounded-lg bg-white p-6 md:w-1/2">
+          <h2 className="mb-2 text-3xl">Border-radius</h2>
           <div className="flex w-1/2 gap-x-4">
             <button
               className={
                 selectedStandard === "px"
-                  ? "rounded-lg border-2 border-accent"
-                  : ""
+                  ? "rounded-lg border-2 border-accent px-2 py-1"
+                  : "px-2 py-1"
               }
               onClick={() =>
                 dispatch({ type: "standardChange", payload: "px" })
@@ -70,8 +81,8 @@ function BorderRadiusGen() {
             <button
               className={
                 selectedStandard === "%"
-                  ? "rounded-lg border-2 border-accent"
-                  : ""
+                  ? "rounded-lg border-2 border-accent px-2 py-1"
+                  : "px-2 py-1"
               }
               onClick={() => dispatch({ type: "standardChange", payload: "%" })}
             >
@@ -82,6 +93,7 @@ function BorderRadiusGen() {
             <div className="flex w-full justify-between">
               <p>Top left</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({ type: "topLeftChange", payload: e.target.value })
                 }
@@ -105,7 +117,9 @@ function BorderRadiusGen() {
           <div>
             <div className="flex w-full justify-between">
               <p>Top right</p>
+
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({ type: "topRightChange", payload: e.target.value })
                 }
@@ -130,6 +144,7 @@ function BorderRadiusGen() {
             <div className="flex w-full justify-between">
               <p>Bottom right</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({
                     type: "bottomRightChange",
@@ -157,6 +172,7 @@ function BorderRadiusGen() {
             <div className="flex w-full justify-between">
               <p>Bottom left</p>
               <input
+                className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({
                     type: "bottomLeftChange",
@@ -184,7 +200,7 @@ function BorderRadiusGen() {
 
         <div className="flex w-full flex-col items-center justify-center rounded-lg bg-white p-6 md:w-1/2">
           <div
-            className=" h-56 w-56 border-4 border-text bg-primary"
+            className=" h-56 w-56 border-2 border-text bg-background"
             style={{
               borderRadius: `${topLeft}px ${topRight}px ${bottomRight}px ${bottomLeft}px`,
             }}
@@ -192,7 +208,7 @@ function BorderRadiusGen() {
         </div>
       </div>
 
-      <div className="w-full rounded-lg px-12 py-6">
+      <div className="mb-4 w-full rounded-lg px-12 py-6">
         <div className="flex flex-col items-start justify-between rounded-lg bg-text px-6 py-6 text-background md:flex-row">
           <p className=" text-background">
             {`border-radius: ${topLeft}${selectedStandard} ${topRight}${selectedStandard} ${bottomRight}${selectedStandard} ${bottomLeft}${selectedStandard};`}
