@@ -17,9 +17,9 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 
 ### The project
 
--Customize CSS properties such as colors, borders, box-shadows,buttons etc.
--See live preview of the CSS styles being generated
--Copy the generated CSS code to clipboard
+- Customize CSS properties such as colors, borders, box-shadows,buttons etc.
+- See live preview of the CSS styles being generated
+- Copy the generated CSS code to clipboard
 
 ### Links
 
@@ -28,11 +28,11 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 
 ### Built with
 
--React.js
--HTML5
--CSS
--Tailwind CSS
--JavaScript
+- React.js
+- HTML5
+- CSS
+- Tailwind CSS
+- JavaScript
 
 ### Author
 
