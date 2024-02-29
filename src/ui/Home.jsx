@@ -40,77 +40,77 @@ function Home() {
       <div className="mb-10 flex w-full items-center justify-center">
         <div className="flex w-4/5 flex-wrap justify-center gap-x-6  gap-y-6  border border-text  p-6">
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/line-height"
           >
             Line Height
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/border"
           >
             Border radius
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/flexbox"
           >
             Flexbox
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/grid"
           >
             Grid
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/text-shadow"
           >
             Text Shadow
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/box-shadow"
           >
             Box Shadow
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/gradient"
           >
             Gradient
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/letter-spacing"
           >
             Letter Spacing
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
-            to="/list-style"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
+            to="/text-decoration"
           >
-            List Style
+            Text Decoration
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/text-color"
           >
             Text Color
           </Link>
 
           <Link
-            className="shadow-customShadow flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-text transition-all  ease-out hover:shadow-none"
+            className="flex w-1/4 items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all  ease-out hover:shadow-none"
             to="/text-align"
           >
             Text Align

@@ -7,7 +7,7 @@ import GridGen from "./features/grid-generator/GridGen";
 import TextShadowGen from "./features/text-shadow-generator/TextShadowGen";
 import AppLayout from "./ui/AppLayout";
 import BoxShadowGen from "./features/box-shadow-generator/BoxShadowGen";
-import ListStyleGen from "./features/list-style-generator/ListStyleGen";
+import TextDecorationGen from "./features/text-decoration-generator/TextDecorationGen";
 import LetterSpacingGen from "./features/letter-spacing-generator/LetterSpacingGen";
 import GradientGen from "./features/gradient-generator/GradientGen";
 import ColorGen from "./features/text-color-generator/ColorGen";
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
         element: <BoxShadowGen />,
       },
       {
-        path: "/list-style",
-        element: <ListStyleGen />,
+        path: "/text-decoration",
+        element: <TextDecorationGen />,
       },
       {
         path: "/letter-spacing",
