@@ -93,10 +93,13 @@ function FlexboxGen() {
       <div className="w-full px-12 text-xl">
         <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
           <b className="text-accent">Flexbox</b>, short for Flexible Box Layout,
-          is a layout model in CSS designed to provide a more efficient way to
-          distribute space and align items within a container, even when their
-          size is unknown or dynamic. Flexbox is widely used for building
-          responsive and flexible layouts in modern web design.
+          is a layout model in CSS designed to provide a{" "}
+          <span className="text-primary">more efficient way</span> to distribute
+          space and align items within a container, even when their size is
+          unknown or dynamic. Flexbox is widely used for building
+          <span className="text-primary"> responsive</span> and{" "}
+          <span className="text-primary">flexible</span> layouts in modern web
+          design.
         </p>
       </div>
 

@@ -89,8 +89,9 @@ function GradientGen() {
           <b className="text-accent">CSS gradients</b> allow smooth color
           transitions in backgrounds, borders, or text. Linear gradients create
           transitions along a line, while radial gradients radiate from a center
-          point. They offer flexibility in color blending for visually appealing
-          web design.
+          point. They offer <span className="text-primary">flexibility</span> in
+          color blending for{" "}
+          <span className="text-primary"> visually appealing</span> web design.
         </p>
       </div>
 
