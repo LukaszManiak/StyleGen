@@ -74,7 +74,7 @@ function BoxShadowGen() {
 
       <div className="flex w-full flex-col justify-center  gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
         <div className="w-full rounded-lg bg-white p-6 md:w-1/2">
-          <h2 className="mb-2 text-3xl">Box-Shadow</h2>
+          <h2 className="mb-2 text-3xl tracking-widest">Box-Shadow</h2>
 
           <div>
             <div className="flex w-full justify-between">
