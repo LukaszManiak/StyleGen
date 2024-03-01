@@ -83,7 +83,7 @@ function GradientGen() {
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
-
+      <h1 className="w-full px-12 text-3xl">(not finished yet...)</h1>
       <div className="w-full px-12 text-xl">
         <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
           <b className="text-accent">CSS gradients</b> allow smooth color
