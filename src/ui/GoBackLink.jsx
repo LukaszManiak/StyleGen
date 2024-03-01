@@ -1,14 +1,18 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function GoBackLink() {
+function GoBackButton() {
+  const navigate = useNavigate();
+
   return (
-    <Link
-      className="w-full px-12 transition-all ease-in-out hover:px-6 hover:font-bold"
-      to="/"
-    >
-      👈🏼 Go back
-    </Link>
+    <div className="w-full px-12">
+      <button
+        className="px-0 transition-all ease-in-out hover:px-6 hover:font-bold"
+        onClick={() => navigate(-1)}
+      >
+        &larr; Go back
+      </button>
+    </div>
   );
 }
 
-export default GoBackLink;
+export default GoBackButton;

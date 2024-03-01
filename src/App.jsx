@@ -6,6 +6,7 @@ import FlexboxGen from "./features/flexbox-generator/FlexboxGen";
 import GridGen from "./features/grid-generator/GridGen";
 import TextShadowGen from "./features/text-shadow-generator/TextShadowGen";
 import AppLayout from "./ui/AppLayout";
+import Error from "./ui/Error";
 import BoxShadowGen from "./features/box-shadow-generator/BoxShadowGen";
 import TextDecorationGen from "./features/text-decoration-generator/TextDecorationGen";
 import LetterSpacingGen from "./features/letter-spacing-generator/LetterSpacingGen";
@@ -17,6 +18,7 @@ import TextAlignGen from "./features/text-align-generator/TextAlignGen";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
