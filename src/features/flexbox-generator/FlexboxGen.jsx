@@ -62,6 +62,11 @@ function reducer(state, action) {
       } else {
         return state;
       }
+    case "resetSettings":
+      return {
+        ...initialState,
+      };
+
     default:
       throw new Error("Unknown");
   }
@@ -226,6 +231,12 @@ function FlexboxGen() {
               onClick={() => dispatch({ type: "removeBox" })}
             >
               -Remove box
+            </button>
+            <button
+              className="rounded-md border border-text px-2"
+              onClick={() => dispatch({ type: "resetSettings" })}
+            >
+              Reset settings
             </button>
           </div>
         </div>
