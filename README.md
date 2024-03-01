@@ -4,6 +4,8 @@
 
 Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom CSS styles with ease and convenience. Whether you're a seasoned developer or just starting out, our intuitive interface empowers you to create stunning styles in just a few clicks!
 
+## Live Site URL: [Netlify](https://stylegen.netlify.app/)
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -24,7 +26,6 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 ### Links
 
 - Solution URL: [GitHub](https://github.com/LukaszManiak/StyleGen)
-- Live Site URL: [Netlify](https://stylegen.netlify.app/)
 
 ### Built with
 
