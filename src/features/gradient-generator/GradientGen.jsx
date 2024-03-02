@@ -27,18 +27,6 @@ function reducer(state, action) {
         ...state,
         vertical: +action.payload,
       };
-    case "blurChange":
-      if (action.payload > 100 || action.payload < 0) return state;
-      return {
-        ...state,
-        blur: +action.payload,
-      };
-    case "spreadChange":
-      if (action.payload > 100 || action.payload < -100) return state;
-      return {
-        ...state,
-        spread: +action.payload,
-      };
     case "colorChange":
       return {
         ...state,
@@ -49,24 +37,24 @@ function reducer(state, action) {
         ...state,
         selectedStandard: action.payload,
       };
-    // case "addBox":
-    //   if (state.boxArray.length < 8) {
-    //     return {
-    //       ...state,
-    //       boxArray: [...state.boxArray, 1],
-    //     };
-    //   } else {
-    //     return state;
-    //   }
-    // case "removeBox":
-    //   if (state.boxArray.length > 3) {
-    //     return {
-    //       ...state,
-    //       boxArray: [...state.boxArray.slice(0, -1)],
-    //     };
-    //   } else {
-    //     return state;
-    //   }
+    case "addColor":
+      if (state.boxArray.length < 8) {
+        return {
+          ...state,
+          colorArray: [...state.colorArray, 1],
+        };
+      } else {
+        return state;
+      }
+    case "removeColor":
+      if (state.boxArray.length > 3) {
+        return {
+          ...state,
+          colorArray: [...state.colorArray.slice(0, -1)],
+        };
+      } else {
+        return state;
+      }
     case "resetSettings":
       return {
         ...initialState,
