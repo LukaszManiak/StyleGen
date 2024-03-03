@@ -1,3 +1,4 @@
+// create new color form for gradient generator
 function createColorForm(id) {
   return {
     id: id,

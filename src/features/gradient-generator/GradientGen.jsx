@@ -88,7 +88,7 @@ function reducer(state, action) {
         ...initialState,
       };
     default:
-      throw new Error("Unknown");
+      throw new Error("Unknown error");
   }
 }
 
