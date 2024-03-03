@@ -30,10 +30,10 @@ Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom
 ### Built with
 
 - React.js
-- HTML5
-- CSS
 - Tailwind CSS
 - JavaScript
+- HTML5
+- CSS
 
 ### Author
 
