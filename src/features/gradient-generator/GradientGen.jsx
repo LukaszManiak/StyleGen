@@ -20,7 +20,7 @@ const initialState = {
       color: "#5EACB5",
     },
     {
-      id: 1,
+      id: 288,
       vertical: 100,
       color: "#020d0d",
     },
@@ -37,15 +37,35 @@ function reducer(state, action) {
         angleValue: +action.payload,
       };
     case "verticalChange":
-      if (action.payload > 100 || action.payload < -100) return state;
+      const { value, id } = action.payload;
+      if (value > 100 || value < -100) return state;
+
+      const changedValue = state.colorArray.map((colorItem) => {
+        if (colorItem.id === id) {
+          return { ...colorItem, vertical: value };
+        } else {
+          return colorItem;
+        }
+      });
+
       return {
         ...state,
-        vertical: +action.payload,
+        colorArray: changedValue,
       };
     case "colorChange":
+      const { colorValue, colorId } = action.payload;
+
+      const changedColors = state.colorArray.map((colorItem) => {
+        if (colorItem.id === colorId) {
+          return { ...colorItem, color: colorValue };
+        } else {
+          return colorItem;
+        }
+      });
+
       return {
         ...state,
-        color: action.payload,
+        colorArray: changedColors,
       };
     case "standardChange":
       return {
@@ -88,7 +108,6 @@ function GradientGen() {
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
-      <h1 className="w-full px-12 text-3xl">(not finished yet...)</h1>
       <div className="w-full px-12 text-xl">
         <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
           <b className="text-accent">CSS gradients</b> allow smooth color
@@ -131,35 +150,40 @@ function GradientGen() {
             </button>
           </div>
 
-          <div>
-            <div className="flex w-full justify-between">
-              <p>Angle</p>
+          {selectedStandard === "linear" && (
+            <div>
+              <div className="flex w-full justify-between">
+                <p>Angle</p>
+                <input
+                  className="rounded-md border border-text px-2"
+                  onChange={(e) =>
+                    dispatch({
+                      type: "angleValueChange",
+                      payload: e.target.value,
+                    })
+                  }
+                  type="number"
+                  value={angleValue}
+                  min="0"
+                  max="360"
+                />
+              </div>
               <input
-                className="rounded-md border border-text px-2"
+                className="w-1/2"
                 onChange={(e) =>
                   dispatch({
                     type: "angleValueChange",
                     payload: e.target.value,
                   })
                 }
-                type="number"
-                value={angleValue}
+                type="range"
                 min="0"
                 max="360"
+                value={angleValue}
+                step="1"
               />
             </div>
-            <input
-              className="w-1/2"
-              onChange={(e) =>
-                dispatch({ type: "angleValueChange", payload: e.target.value })
-              }
-              type="range"
-              min="0"
-              max="360"
-              value={angleValue}
-              step="1"
-            />
-          </div>
+          )}
 
           {colorArray.map((colorItem, index) => (
             <div key={index}>
@@ -168,7 +192,13 @@ function GradientGen() {
                 <div className="flex items-center gap-x-4">
                   <input
                     onChange={(e) =>
-                      dispatch({ type: "colorChange", payload: e.target.value })
+                      dispatch({
+                        type: "colorChange",
+                        payload: {
+                          colorValue: e.target.value,
+                          colorId: colorItem.id,
+                        },
+                      })
                     }
                     type="color"
                     value={colorItem.color}
@@ -177,8 +207,11 @@ function GradientGen() {
                     className="rounded-md border border-text px-2"
                     onChange={(e) =>
                       dispatch({
-                        type: "spreadChange",
-                        payload: e.target.value,
+                        type: "verticalChange",
+                        payload: {
+                          value: e.target.value,
+                          id: colorItem.id,
+                        },
                       })
                     }
                     type="number"
@@ -191,7 +224,13 @@ function GradientGen() {
               <input
                 className="w-1/2"
                 onChange={(e) =>
-                  dispatch({ type: "spreadChange", payload: e.target.value })
+                  dispatch({
+                    type: "verticalChange",
+                    payload: {
+                      value: e.target.value,
+                      id: colorItem.id,
+                    },
+                  })
                 }
                 type="range"
                 min="0"
@@ -229,7 +268,7 @@ function GradientGen() {
             className="h-4/5 w-4/5 rounded-md"
             style={{
               backgroundColor: `${colorArray[0].color}`,
-              backgroundImage: `${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}%`)}`,
+              backgroundImage: `${selectedStandard}-gradient(${selectedStandard === "linear" ? angleValue + "deg" : "circle"}, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}%`)}`,
             }}
           ></div>
         </div>
@@ -240,14 +279,14 @@ function GradientGen() {
           <p className=" text-background">
             {`background-color: ${colorArray[0].color};`}
             <br />
-            {`background-image: ${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}%`)}) `}
+            {`background-image: ${selectedStandard}-gradient(${selectedStandard === "linear" ? angleValue + "deg" : "circle"}, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}%`)}) `}
           </p>
 
           <button
             onClick={() => {
               navigator.clipboard.writeText(
                 `background-color: ${colorArray[0].color};
-                background-image: ${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% ,`)}); `,
+                background-image: ${selectedStandard}-gradient(${selectedStandard === "linear" ? angleValue + "deg" : "circle"}, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% ,`)}); `,
               );
             }}
           >
