@@ -2,14 +2,29 @@ import { useReducer } from "react";
 
 import GoBackLink from "../../ui/GoBackLink";
 
+function createColorForm(id) {
+  return {
+    id: id,
+    vertical: 0,
+    color: "#5EACB5",
+  };
+}
+
 const initialState = {
   selectedStandard: "linear",
   angleValue: 90,
-  vertical: 10,
-  blur: 30,
-  spread: 0,
-  color: "#5EACB5",
-  inset: false,
+  colorArray: [
+    {
+      id: 1,
+      vertical: 0,
+      color: "#5EACB5",
+    },
+    {
+      id: 1,
+      vertical: 100,
+      color: "#020d0d",
+    },
+  ],
 };
 
 function reducer(state, action) {
@@ -38,16 +53,16 @@ function reducer(state, action) {
         selectedStandard: action.payload,
       };
     case "addColor":
-      if (state.boxArray.length < 8) {
+      if (state.colorArray.length < 6) {
         return {
           ...state,
-          colorArray: [...state.colorArray, 1],
+          colorArray: [...state.colorArray, createColorForm(new Date() * 2)],
         };
       } else {
         return state;
       }
     case "removeColor":
-      if (state.boxArray.length > 3) {
+      if (state.colorArray.length > 2) {
         return {
           ...state,
           colorArray: [...state.colorArray.slice(0, -1)],
@@ -65,8 +80,10 @@ function reducer(state, action) {
 }
 
 function GradientGen() {
-  const [{ angleValue, color, spread, selectedStandard }, dispatch] =
-    useReducer(reducer, initialState);
+  const [{ angleValue, colorArray, selectedStandard }, dispatch] = useReducer(
+    reducer,
+    initialState,
+  );
 
   return (
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
@@ -144,55 +161,57 @@ function GradientGen() {
             />
           </div>
 
-          <div>
-            <div className="flex w-full justify-between">
-              <p>Color 1:</p>
-              <div className="flex items-center gap-x-4">
-                <input
-                  onChange={(e) =>
-                    dispatch({ type: "colorChange", payload: e.target.value })
-                  }
-                  type="color"
-                  value={color}
-                />
-                <input
-                  className="rounded-md border border-text px-2"
-                  onChange={(e) =>
-                    dispatch({
-                      type: "spreadChange",
-                      payload: e.target.value,
-                    })
-                  }
-                  type="number"
-                  value={spread}
-                  min="0"
-                  max="100"
-                />
+          {colorArray.map((colorItem, index) => (
+            <div key={index}>
+              <div className="flex w-full justify-between">
+                <p>Color {index + 1}:</p>
+                <div className="flex items-center gap-x-4">
+                  <input
+                    onChange={(e) =>
+                      dispatch({ type: "colorChange", payload: e.target.value })
+                    }
+                    type="color"
+                    value={colorItem.color}
+                  />
+                  <input
+                    className="rounded-md border border-text px-2"
+                    onChange={(e) =>
+                      dispatch({
+                        type: "spreadChange",
+                        payload: e.target.value,
+                      })
+                    }
+                    type="number"
+                    value={colorItem.vertical}
+                    min="0"
+                    max="100"
+                  />
+                </div>
               </div>
+              <input
+                className="w-1/2"
+                onChange={(e) =>
+                  dispatch({ type: "spreadChange", payload: e.target.value })
+                }
+                type="range"
+                min="0"
+                max="100"
+                value={colorItem.vertical}
+                step="1"
+              />
             </div>
-            <input
-              className="w-1/2"
-              onChange={(e) =>
-                dispatch({ type: "spreadChange", payload: e.target.value })
-              }
-              type="range"
-              min="0"
-              max="100"
-              value={spread}
-              step="1"
-            />
-          </div>
+          ))}
 
           <div className="flex w-full items-center gap-x-4">
             <button
               className="rounded-md border border-text px-2"
-              onClick={() => dispatch({ type: "addBox" })}
+              onClick={() => dispatch({ type: "addColor" })}
             >
               +Add
             </button>
             <button
               className="rounded-md border border-text px-2"
-              onClick={() => dispatch({ type: "removeBox" })}
+              onClick={() => dispatch({ type: "removeColor" })}
             >
               -Remove
             </button>
@@ -208,9 +227,10 @@ function GradientGen() {
         <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white p-2 md:w-1/2">
           <div
             className="h-4/5 w-4/5 rounded-md border-2 border-text bg-background"
-            // style={{
-            //   boxShadow: `${inset ? "inset" : ""} ${horizontal}px ${vertical}px ${blur}px ${spread}px ${color}`,
-            // }}
+            style={{
+              backgroundColor: `${colorArray[0].color}`,
+              backgroundImage: `${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% ,`)}) `,
+            }}
           ></div>
         </div>
       </div>
@@ -218,15 +238,16 @@ function GradientGen() {
       <div className="w-full rounded-lg px-12 py-6">
         <div className="flex w-full flex-col items-start justify-between rounded-lg bg-text px-6 py-6 text-background md:flex-row md:items-center">
           <p className=" text-background">
-            {`background-color: rgba(76, 186, 186, 1);`}
+            {`background-color: ${colorArray[0].color};`}
             <br />
-            {`background-image: linear-gradient(90deg, rgba(76, 186, 186, 1) 0%, rgba(0, 0, 0, 1) 100%);`}
+            {`background-image: ${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% `)}) `}
           </p>
 
           <button
             onClick={() => {
               navigator.clipboard.writeText(
-                `background-image: linear-gradient(90deg, rgba(76, 186, 186, 1) 0%, rgba(0, 0, 0, 1) 100%);`,
+                `background-color: ${colorArray[0].color};
+                background-image: ${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% ,`)}); `,
               );
             }}
           >
