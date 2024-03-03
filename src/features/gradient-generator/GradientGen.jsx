@@ -1,14 +1,7 @@
 import { useReducer } from "react";
+import createColorForm from "../../helpers/createColorForm";
 
 import GoBackLink from "../../ui/GoBackLink";
-
-function createColorForm(id) {
-  return {
-    id: id,
-    vertical: 0,
-    color: "#5EACB5",
-  };
-}
 
 const initialState = {
   selectedStandard: "linear",
