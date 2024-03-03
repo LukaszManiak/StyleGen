@@ -226,10 +226,10 @@ function GradientGen() {
 
         <div className="flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-white p-2 md:w-1/2">
           <div
-            className="h-4/5 w-4/5 rounded-md border-2 border-text bg-background"
+            className="h-4/5 w-4/5 rounded-md"
             style={{
               backgroundColor: `${colorArray[0].color}`,
-              backgroundImage: `${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% ,`)}) `,
+              backgroundImage: `${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}%`)}`,
             }}
           ></div>
         </div>
@@ -240,7 +240,7 @@ function GradientGen() {
           <p className=" text-background">
             {`background-color: ${colorArray[0].color};`}
             <br />
-            {`background-image: ${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}% `)}) `}
+            {`background-image: ${selectedStandard}-gradient(${angleValue}deg, ${colorArray.map((colorItem) => `${colorItem.color} ${colorItem.vertical}%`)}) `}
           </p>
 
           <button
