@@ -4,8 +4,6 @@ import Header from "../ui/Header";
 import Footer from "../ui/Footer";
 
 function Error() {
-  const error = useRouteError();
-
   return (
     <>
       <Header />
