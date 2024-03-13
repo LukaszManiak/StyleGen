@@ -4,6 +4,10 @@
 
 Welcome to the StyleGen, your one-stop solution for effortlessly crafting custom CSS styles with ease and convenience. Whether you're a seasoned developer or just starting out, our intuitive interface empowers you to create stunning styles in just a few clicks!
 
+## Goal
+
+StylGen was conceptualized to alleviate the common pain points developers face when styling websites and applications. Its primary objective is to simplify the styling process by offering a curated collection of CSS code for frequently used styles, thereby reducing the need for repetitive manual coding.
+
 ## Live Site URL: [Netlify](https://stylegen.netlify.app/)
 
 ## Table of contents
