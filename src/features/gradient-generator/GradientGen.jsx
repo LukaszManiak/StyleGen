@@ -179,7 +179,7 @@ function GradientGen() {
           )}
 
           {colorArray.map((colorItem, index) => (
-            <div key={index}>
+            <div key={colorItem + index}>
               <div className="flex w-full justify-between">
                 <p>Color {index + 1}:</p>
                 <div className="flex items-center gap-x-4">

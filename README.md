@@ -33,7 +33,8 @@ StylGen was conceptualized to alleviate the common pain points developers face w
 
 ### Built with
 
-- React.js
+- React.js (useState, useReducer)
+- React Router
 - Tailwind CSS
 - JavaScript
 - HTML5
