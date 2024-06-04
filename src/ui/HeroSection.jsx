@@ -8,7 +8,7 @@ function HeroSection() {
         <h1 className="text-center text-5xl font-bold tracking-wider md:text-start md:text-6xl">
           StyleGen
         </h1>
-        <p className="text-center leading-6 md:text-start">
+        <p className="text-center text-xl leading-6 md:text-start">
           Elevate your web development game with StyleGen – the ultimate CSS
           styling tool. Say goodbye to tedious manual styling and hello to
           effortless project enhancement. With StyleGen, unleash your creativity
