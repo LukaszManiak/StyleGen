@@ -14,6 +14,7 @@ import GradientGen from "./features/gradient-generator/GradientGen";
 import ColorGen from "./features/text-color-generator/ColorGen";
 import LineHeightGen from "./features/line-height-generator/LineHeightGen";
 import TextAlignGen from "./features/text-align-generator/TextAlignGen";
+import TransformGen from "./features/transform-generator/TransformGen";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
       {
         path: "/text-align",
         element: <TextAlignGen />,
+      },
+      {
+        path: "/transform",
+        element: <TransformGen />,
       },
     ],
   },

@@ -80,6 +80,12 @@ function LinksList() {
         >
           Text Align
         </Link>
+        <Link
+          className="flex w-auto items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
+          to="/transform"
+        >
+          Transform
+        </Link>
       </div>
     </div>
   );
