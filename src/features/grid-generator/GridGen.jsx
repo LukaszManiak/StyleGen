@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-
 import GoBackLink from "../../ui/GoBackLink";
 
 const initialState = {
@@ -11,7 +10,6 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    //opening task modal form
     case "columnsChange":
       return {
         ...state,
@@ -27,13 +25,13 @@ function reducer(state, action) {
         ...state,
         columnGap: +action.payload > 50 ? 50 : +action.payload,
       };
-    case "rowsGapChange":
+    case "rowGapChange":
       return {
         ...state,
         rowGap: +action.payload > 50 ? 50 : +action.payload,
       };
     default:
-      throw new Error("Unknown");
+      throw new Error("Unknown action type");
   }
 }
 
@@ -43,10 +41,19 @@ function GridGen() {
     initialState,
   );
 
+  const gridItems = Array.from({ length: columns * rows }, (_, index) => (
+    <div
+      key={index}
+      className="flex items-center justify-center rounded-lg border-2 border-accent"
+      style={{ minHeight: "50px", minWidth: "50px" }}
+    >
+      {index + 1}
+    </div>
+  ));
+
   return (
-    <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
+    <section className="mt-10 flex w-full flex-col items-center justify-around gap-y-20 md:mt-20">
       <GoBackLink />
-      <h1 className="text-3xl">not finished yet...</h1>
       <div className="w-full px-12 text-xl">
         <p className="w-full rounded-md border border-text px-4 py-2 md:w-2/3">
           <b className="text-accent">CSS Grid</b> is a powerful layout system in
@@ -57,11 +64,11 @@ function GridGen() {
         </p>
       </div>
 
-      <div className="flex w-full flex-col justify-center  gap-y-20     px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
-        <div className="flex h-1/4 w-full flex-col gap-y-4 rounded-lg  bg-white p-6 md:w-1/2">
+      <div className="flex w-full flex-col justify-center gap-y-20 px-12 py-6 md:flex-row md:justify-between md:gap-x-20 md:gap-y-0">
+        <div className="flex h-1/4 w-full flex-col gap-y-4 rounded-lg bg-white p-6 md:w-1/2">
           <h2 className="text-3xl tracking-widest">Grid</h2>
           <div>
-            <div className="mb-2 flex w-full justify-between  ">
+            <div className="mb-2 flex w-full justify-between">
               <p>Columns</p>
               <input
                 className="rounded-md border border-text px-2"
@@ -92,7 +99,7 @@ function GridGen() {
             />
           </div>
           <div>
-            <div className="mb-2 flex w-full justify-between  ">
+            <div className="mb-2 flex w-full justify-between">
               <p>Rows</p>
               <input
                 className="rounded-md border border-text px-2"
@@ -123,7 +130,7 @@ function GridGen() {
             />
           </div>
           <div>
-            <div className="mb-2 flex w-full justify-between  ">
+            <div className="mb-2 flex w-full justify-between">
               <p>Column Gap</p>
               <input
                 className="rounded-md border border-text px-2"
@@ -154,13 +161,13 @@ function GridGen() {
             />
           </div>
           <div>
-            <div className="mb-2 flex w-full justify-between  ">
+            <div className="mb-2 flex w-full justify-between">
               <p>Row Gap</p>
               <input
                 className="rounded-md border border-text px-2"
                 onChange={(e) =>
                   dispatch({
-                    type: "rowsGapChange",
+                    type: "rowGapChange",
                     payload: e.target.value,
                   })
                 }
@@ -173,7 +180,7 @@ function GridGen() {
             <input
               onChange={(e) =>
                 dispatch({
-                  type: "rowsGapChange",
+                  type: "rowGapChange",
                   payload: e.target.value,
                 })
               }
@@ -186,28 +193,34 @@ function GridGen() {
           </div>
         </div>
 
-        <div className="flex w-full  flex-col items-center justify-center rounded-lg bg-white p-6 md:w-1/2">
+        <div className="flex w-full flex-col items-center justify-center rounded-lg bg-white p-6 md:w-1/2">
           <div
-            className="h-auto w-3/4 overflow-hidden rounded-md border border-text  p-4"
-            style={
-              {
-                // lineHeight: `${heightSpaceValue}`,
-              }
-            }
-          ></div>
+            className="h-auto w-3/4 overflow-hidden rounded-md border border-text p-4"
+            style={{
+              display: "grid",
+              gridTemplateColumns: `repeat(${columns}, 1fr)`,
+              gridTemplateRows: `repeat(${rows}, 1fr)`,
+              columnGap: `${columnGap}px`,
+              rowGap: `${rowGap}px`,
+            }}
+          >
+            {gridItems}
+          </div>
         </div>
       </div>
 
       <div className="mb-8 w-full rounded-lg px-12 py-6">
-        <div className="flex flex-col items-start justify-between rounded-lg bg-text px-6 py-6 text-background md:flex-row">
-          {/* <p className=" text-background">{`line-height: ${heightSpaceValue};`}</p> */}
+        <div className="flex flex-col items-center justify-between rounded-lg bg-text px-6 py-6 text-background md:flex-row">
+          <p
+            className="text-background"
+            style={{ whiteSpace: "pre-wrap" }}
+          >{`display: grid;\ngrid-template-columns: repeat(${columns}, 1fr);\ngrid-template-rows: repeat(${rows}, 1fr);\ncolumn-gap: ${columnGap}px;\nrow-gap: ${rowGap}px;`}</p>
 
           <button
             onClick={() => {
-              navigator.clipboard
-                .writeText
-                // `line-height: ${heightSpaceValue};`,
-                ();
+              navigator.clipboard.writeText(
+                `display: grid; grid-template-columns: repeat(${columns}, 1fr); grid-template-rows: repeat(${rows}, 1fr); column-gap: ${columnGap}px; row-gap: ${rowGap}px;`,
+              );
             }}
           >
             📋 Copy code
