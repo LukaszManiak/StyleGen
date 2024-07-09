@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header>
-      <nav className=" bg-backround w-full border-b border-text px-12 py-8">
+      <nav className=" bg-backround w-full  px-12 py-8">
         <div className="flex items-center gap-x-2">
           <div
             style={{

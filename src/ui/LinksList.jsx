@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function LinksList() {
   return (
     <div className="mb-10 flex w-full items-center justify-center">
-      <div className="flex w-4/5 flex-wrap justify-center gap-x-6  gap-y-6  border border-text p-4 md:p-6">
+      <div className="flex w-4/5 flex-wrap justify-center gap-x-6 gap-y-6  rounded-sm  border border-text p-4 md:p-6">
         <Link
           className="flex w-auto items-center justify-center border border-text px-4 py-2 text-center shadow-customShadow shadow-text transition-all ease-out  hover:shadow-none md:w-1/4"
           to="/line-height"

@@ -10,4 +10,14 @@ html {
 
 body {
   background-color: #f9fbfb;
+  background-image: url("../src/images/blob.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: sticky;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("../src/images/blob-mobile.svg");
+  }
 }
