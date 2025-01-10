@@ -36,7 +36,8 @@ function TextDecorationGen() {
       <GoBackLink />
 
       <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
+          {" "}
           The <b className="text-accent">text-decoration</b> property in CSS is
           used to specify the decoration added to text. It can be used to
           underline, overline, strike through, or blink text. This property is

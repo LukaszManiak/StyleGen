@@ -52,8 +52,8 @@ function BorderRadiusGen() {
     <section className="mt-8 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
 
-      <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+      <div className="w-full px-12 text-xl ">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
           <b className="text-accent">Border-radius</b> is a CSS property that
           allows you to create rounded corners for elements such as boxes and
           buttons. This property is commonly used for creating{" "}

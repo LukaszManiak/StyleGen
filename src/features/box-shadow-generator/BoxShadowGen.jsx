@@ -62,7 +62,7 @@ function BoxShadowGen() {
       <GoBackLink />
 
       <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
           The <b className="text-accent">box-shadow</b> property in CSS allows
           you to add a shadow effect to elements, such as boxes or buttons. This
           property is commonly used to add{" "}

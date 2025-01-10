@@ -102,7 +102,8 @@ function GradientGen() {
     <section className="mt-10 flex w-full  flex-col items-center justify-around  gap-y-20 md:mt-20 ">
       <GoBackLink />
       <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
+          {" "}
           <b className="text-accent">CSS gradients</b> allow smooth color
           transitions in backgrounds, borders, or text. Linear gradients create
           transitions along a line, while radial gradients radiate from a center

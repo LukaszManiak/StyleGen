@@ -91,7 +91,8 @@ function FlexboxGen() {
       <GoBackLink />
 
       <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
+          {" "}
           <b className="text-accent">Flexbox</b>, short for Flexible Box Layout,
           is a layout model in CSS designed to provide a{" "}
           <span className="text-primary">more efficient way</span> to distribute

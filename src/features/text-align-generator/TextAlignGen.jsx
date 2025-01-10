@@ -27,7 +27,8 @@ function TextAlignGen() {
       <GoBackLink />
 
       <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
+          {" "}
           The <b className="text-accent">text-align</b> property in CSS is used
           to specify the horizontal alignment of text within its containing
           element. It accepts values such as "left", "right", "center" and

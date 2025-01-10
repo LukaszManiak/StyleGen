@@ -27,7 +27,8 @@ function LineHeightGen() {
       <GoBackLink />
 
       <div className="w-full px-12 text-xl">
-        <p className="w-full rounded-md border border-text px-4 py-2 md:w-1/2">
+        <p className="w-full rounded-md bg-white px-8 py-8  md:w-1/2">
+          {" "}
           <b className="text-accent">Line-height</b> is a CSS property that
           controls the distance between lines of text within a text block. It
           can be used to adjust text{" "}
